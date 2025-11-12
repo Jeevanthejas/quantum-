@@ -22,3 +22,16 @@ export interface SweepData {
     theta: number;
     prob: number;
 }
+
+export type FlipResult = 'Heads' | 'Tails';
+
+export type Guess = 0 | 1;
+
+export type Difficulty = 'easy' | 'medium' | 'hard';
+
+export interface GuessRound {
+    guess: Guess;
+    result: Guess;
+    isCorrect: boolean;
+    p0: number;
+}

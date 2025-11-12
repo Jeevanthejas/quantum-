@@ -66,6 +66,22 @@ export const runSimulation = (theta: number): { state: QubitState; probabilities
   return { state, probabilities };
 };
 
+
+/**
+ * Runs the quantum coin flip simulation: applies Ry(theta) to |0>.
+ * @param theta - The rotation angle for Ry.
+ * @returns An object containing the final state and measurement probabilities.
+ */
+export const runFlipSimulation = (theta: number): { state: QubitState; probabilities: Probabilities } => {
+  let state = STATE_ZERO;
+  // Apply Ry(theta) gate for rotation.
+  const ryGate = getRyGate(theta);
+  state = applyGate(ryGate, state);
+
+  const probabilities = getMeasurementProbs(state);
+  return { state, probabilities };
+};
+
 /**
  * Calculates the measurement probabilities for a given state.
  * P(|0>) = |alpha|^2, P(|1>) = |beta|^2
