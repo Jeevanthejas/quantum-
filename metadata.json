@@ -1,0 +1,5 @@
+{
+  "name": "Quantum Game Simulator",
+  "description": "An interactive educational tool to explore qubit state evolution using game-like controls, inspired by ScienceAtHome quantum games. Adjust the rotation angle to see how it affects the qubit's state on the Bloch sphere and its measurement outcomes.",
+  "requestFramePermissions": []
+}
