@@ -2,7 +2,6 @@
 import React from 'react';
 import type { QubitState, Probabilities } from '../types';
 import Slider from './ui/Slider';
-import { InfoIcon } from './Icons';
 
 interface ControlPanelProps {
   theta: number;
@@ -66,16 +65,6 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
             <p>P(|1⟩): <span className="text-green-400">{probabilities ? probabilities.p1.toFixed(4) : '...'}</span></p>
         </div>
       </div>
-      
-      <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg text-sm text-indigo-200">
-        <h3 className="font-semibold text-base mb-2 flex items-center"><InfoIcon className="mr-2" />How it works</h3>
-        <p>Your controls change a simulated qubit. <br />
-        1. We start with state |0⟩. <br />
-        2. A Hadamard gate creates a superposition. <br />
-        3. The <strong>θ slider</strong> rotates the state. <br/>
-        4. "Measuring" collapses the state to |0⟩ or |1⟩ based on final probabilities.</p>
-      </div>
-
     </div>
   );
 };

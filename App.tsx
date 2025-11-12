@@ -7,6 +7,7 @@ import BlochSphere from './components/BlochSphere';
 import MeasurementHistogram from './components/MeasurementHistogram';
 import ProbabilityPlot from './components/ProbabilityPlot';
 import { GithubIcon } from './components/Icons';
+import HowItWorks from './components/HowItWorks';
 
 interface SimulationResult {
   state: QubitState;
@@ -49,6 +50,7 @@ export default function App() {
       </header>
 
       <main className="flex-grow container mx-auto p-4 md:p-8">
+        <HowItWorks />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1">
             <ControlPanel
