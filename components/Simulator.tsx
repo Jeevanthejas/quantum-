@@ -62,7 +62,7 @@ export default function Simulator() {
           </div>
           
           <div className="md:col-span-2 bg-dark rounded-xl shadow-lg p-4 flex flex-col border border-slate-700/50">
-            <h2 className="text-lg font-semibold mb-4 text-slate-300">Probability P(|0>) vs. θ</h2>
+            <h2 className="text-lg font-semibold mb-4 text-slate-300">Probability P(|0⟩) vs. θ</h2>
             <ProbabilityPlot data={probabilitySweepData} currentTheta={theta} />
           </div>
         </div>
